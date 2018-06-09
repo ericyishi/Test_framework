@@ -71,6 +71,7 @@ class ExcelReader:
                 title = s.row_values(0)  # 首行为title
                 for col in range(1, s.nrows):
                     # 依次遍历其余行，与首行组成dict，拼到self._data中
+                    # zip() 函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的列表。
                     self._data.append(dict(zip(title, s.row_values(col))))
             else:
                 for col in range(0, s.nrows):
