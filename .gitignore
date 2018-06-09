@@ -1,2 +1,4 @@
 .idea
 .idea/vcs.xml
+utils/__pycache__/
+log/
